@@ -1,8 +1,8 @@
-object Form1: TForm1
+object PengaturanFrm: TPengaturanFrm
   Left = 454
   Top = 284
   Width = 353
-  Height = 300
+  Height = 279
   Caption = 'Pengaturan'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -5644,21 +5644,21 @@ object Form1: TForm1
   PixelsPerInch = 96
   TextHeight = 13
   object GroupBox1: TGroupBox
-    Left = 32
+    Left = 24
     Top = 24
     Width = 289
     Height = 193
-    Caption = 'Penaturan Port'
+    Caption = 'Pengaturan Port'
     TabOrder = 0
     object Label1: TLabel
-      Left = 64
+      Left = 60
       Top = 69
       Width = 28
       Height = 13
       Caption = 'Host :'
     end
     object Label2: TLabel
-      Left = 68
+      Left = 60
       Top = 96
       Width = 32
       Height = 13
