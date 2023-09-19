@@ -4,14 +4,17 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls;
+  Dialogs, StdCtrls, Menus;
 
 type
   TChatForm = class(TForm)
     Kirim: TButton;
     MainChat: TGroupBox;
-    BoxChat: TEdit;
-    ListChat: TListBox;
+    ChatShow: TMemo;
+    ChatSend: TMemo;
+    MainMenu1: TMainMenu;
+    Pengeturan1: TMenuItem;
+    procedure Pengeturan1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -23,6 +26,13 @@ var
 
 implementation
 
+uses setting;
+
 {$R *.dfm}
+
+procedure TChatForm.Pengeturan1Click(Sender: TObject);
+begin
+PengaturanFrm.show;
+end;
 
 end.
