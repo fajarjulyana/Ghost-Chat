@@ -5720,7 +5720,7 @@ object PengaturanFrm: TPengaturanFrm
   end
   object TcpClient: TTcpClient
     Active = True
-    RemoteHost = '2020'
+    RemoteHost = 'localhost'
     RemotePort = '2020'
     Left = 248
     Top = 200

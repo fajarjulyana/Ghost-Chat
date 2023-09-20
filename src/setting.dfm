@@ -1,6 +1,6 @@
 object PengaturanFrm: TPengaturanFrm
-  Left = 454
-  Top = 284
+  Left = 536
+  Top = 392
   Width = 353
   Height = 279
   Caption = 'Pengaturan'

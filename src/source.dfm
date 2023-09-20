@@ -3,7 +3,7 @@ object ChatForm: TChatForm
   Top = 396
   Width = 349
   Height = 369
-  ActiveControl = ChatShow
+  ActiveControl = ChatSend
   Caption = 'Ghost Chat'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -5651,19 +5651,20 @@ object ChatForm: TChatForm
     Width = 289
     Height = 297
     TabOrder = 1
-    object ChatShow: TMemo
-      Left = 24
-      Top = 24
-      Width = 241
-      Height = 217
-      ReadOnly = True
-      TabOrder = 0
-    end
     object ChatSend: TMemo
       Left = 24
       Top = 248
       Width = 153
       Height = 25
+      TabOrder = 0
+    end
+    object ChatShow: TMemo
+      Left = 24
+      Top = 16
+      Width = 249
+      Height = 225
+      ReadOnly = True
+      ScrollBars = ssVertical
       TabOrder = 1
     end
   end
