@@ -5641,6 +5641,7 @@ object PengaturanFrm: TPengaturanFrm
     140A8542A15028140A8542A15028140A8542A15028140A8542A1D836FCFFE7B1
     BC325DE0241A0000000049454E44AE426082}
   OldCreateOrder = False
+  OnActivate = FormActivate
   PixelsPerInch = 96
   TextHeight = 13
   object GroupBox1: TGroupBox
@@ -5650,33 +5651,78 @@ object PengaturanFrm: TPengaturanFrm
     Height = 193
     Caption = 'Pengaturan Port'
     TabOrder = 0
-    object Label1: TLabel
+    object PortHost: TLabel
       Left = 60
       Top = 69
       Width = 28
       Height = 13
       Caption = 'Host :'
     end
-    object Label2: TLabel
+    object PortClient: TLabel
       Left = 60
       Top = 96
       Width = 32
       Height = 13
       Caption = 'Client :'
     end
-    object Edit1: TEdit
+    object RemoteHostLAbel: TLabel
+      Left = 20
+      Top = 45
+      Width = 85
+      Height = 13
+      Caption = 'RemoteHostLabel'
+    end
+    object HostPort: TEdit
       Left = 112
       Top = 64
       Width = 121
       Height = 21
+      Hint = 'Masukan  Port Yang akan digunakan'
       TabOrder = 0
+      Text = '2020'
     end
-    object Edit2: TEdit
+    object LocalPortSet: TEdit
       Left = 112
       Top = 92
       Width = 121
       Height = 21
+      Hint = 'Masukan Port Yang akan digunakan'
       TabOrder = 1
+      Text = '2020'
     end
+    object Setting: TBitBtn
+      Left = 160
+      Top = 128
+      Width = 75
+      Height = 25
+      Hint = 'Setting '
+      Caption = 'Set'
+      TabOrder = 2
+      OnClick = SettingClick
+    end
+  end
+  object RemoteHost: TEdit
+    Left = 136
+    Top = 64
+    Width = 121
+    Height = 21
+    Hint = 'Masukan  Port Yang akan digunakan'
+    TabOrder = 1
+    Text = 'localhost'
+  end
+  object TcpServer: TTcpServer
+    Active = True
+    LocalHost = 'localhost'
+    LocalPort = '2020'
+    OnAccept = TcpServerAccept
+    Left = 280
+    Top = 200
+  end
+  object TcpClient: TTcpClient
+    Active = True
+    RemoteHost = '2020'
+    RemotePort = '2020'
+    Left = 248
+    Top = 200
   end
 end
